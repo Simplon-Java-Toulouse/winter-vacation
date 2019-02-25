@@ -120,7 +120,9 @@ solde de Dupont : 1100.0
 solde de Durand : 900.0
 
 ----------------Historique des opérations--------------------
+
 Dupont
+
 Versement [Tue Sep 25 10:59:15 CEST 2018, Montant = 90.0, Compte = c1]
 
 Versement [Tue Sep 25 10:59:15 CEST 2018, Montant = 60.0, Compte = c1]
@@ -130,7 +132,9 @@ Retrait [Tue Sep 25 10:59:15 CEST 2018, Montant = 50.0, Compte = c1]
 Versement [Tue Sep 25 10:59:15 CEST 2018, Montant = 100.0, Compte = c1]
 
 -----------------------------------------
+
 Durand
+
 Versement [Tue Sep 25 10:59:15 CEST 2018, Montant = 100.0, Compte = c2]
 
 Versement [Tue Sep 25 10:59:15 CEST 2018, Montant = 600.0, Compte = c2]

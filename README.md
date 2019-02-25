@@ -50,12 +50,15 @@ On souhaite créer une première version d’une appli qui permet de gérer des 
 3/ Écrire un programme de test en évitant les redondances de données pour permettre d’instancier des clients et des comptes comme ici :
 
 Client c1 = new Client("dupont","dupont@gmail.com");
+
 Client c2 = new Client("durand","durand@gmail.com");	
 		
 Compte cp1 = new CompteCourant("c1",new Date(), 900 , c1 , 60);  // code compte + date de creation + solde + client + découvert autorisé
+
 Compte cp2 = new CompteEpargne("c2",new Date(), 600 , c2 , 5.5); // code compte + date de creation + solde + client + taux
 
 System.out.println(cp1) ;
+
 System.out.println(cp2) ;	
 
 NB : l’objet Date est fourni  par le package « java.util »
@@ -65,27 +68,36 @@ NB : l’objet Date est fourni  par le package « java.util »
 consulterCompte, verser, retirer, virement et tester comme ce qui suit :
 
 banqueMetier.ajouterCompte(cp1);
+
 banqueMetier.ajouterCompte(cp2);
 		
 banqueMetier.verser("c1", 90);
+
 banqueMetier.verser(cp1.getCodeCompte(), 60);
+
 banqueMetier.retirer("c1", 50);
 		
 banqueMetier.verser("c2", 100);
+
 banqueMetier.verser(cp2.getCodeCompte(), 600);
+
 banqueMetier.retirer("c2", 300);
 		
 banqueMetier.virement("c2", "c1", 100);
 		
 System.out.println("\nsolde de " + cp1.getClient().getNom()   + " : "   + banqueMetier.consulterCompte("c1").getSolde());
+
 System.out.println("solde de "   + cp2.getClient().getNom()   + " : "   + banqueMetier.consulterCompte("c2").getSolde());
 
 
 5/ On souhaite à présent afficher l’historique des opérations pour un compte donné. Ajouter la dernière méthode listOperation à notre interface, elle servira à renvoyer l’historique des opérations pour un compte :
 
 System.out.println("----------------Historique des opérations--------------------");
+
 for(Operation op : banqueMetier.listOperation("c1")) 	System.out.println(op);
+
 System.out.println("-----------------------------------------");
+
 for(Operation op : banqueMetier.listOperation("c2"))	System.out.println(op);
 
 
@@ -100,6 +112,7 @@ CompteCourant [CodeCompte=c1 nomClient=Dupont Solde=900.0 Decouvert=60.0 DateCre
 CompteEpargne [CodeCompte=c2 nomClient=Durand Solde=600.0 Taux=5.5 DateCreation=Tue Sep 25 11:44:38 CEST 2018] 
 
 solde de Dupont : 1100.0
+
 solde de Durand : 900.0
 
 ----------------Historique des opérations--------------------

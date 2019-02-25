@@ -87,30 +87,36 @@ Le résultat final sur la console devra ressembler à :
 
 ------bienvenue dans la 1ère version de ma petite banque------
 
-CompteCourant [ CodeCompte=c1 nomClient=Dupont Solde=900.0 Decouvert=60.0 DateCreation=Tue Sep 25 11:44:38 CEST 2018 ] 
-CompteEpargne [ CodeCompte=c2 nomClient=Durand Solde=600.0 Taux=5.5 DateCreation=Tue Sep 25 11:44:38 CEST 2018 ] 
+CompteCourant [CodeCompte=c1 nomClient=Dupont Solde=900.0 Decouvert=60.0 DateCreation=Tue Sep 25 11:44:38 CEST 2018] 
+
+CompteEpargne [CodeCompte=c2 nomClient=Durand Solde=600.0 Taux=5.5 DateCreation=Tue Sep 25 11:44:38 CEST 2018] 
 
 solde de Dupont : 1100.0
 solde de Durand : 900.0
 
 ----------------Historique des opérations--------------------
 Dupont
-Versement [ Tue Sep 25 10:59:15 CEST 2018, Montant = 90.0, Compte = c1 ]
-Versement [ Tue Sep 25 10:59:15 CEST 2018, Montant = 60.0, Compte = c1 ]
-Retrait [ Tue Sep 25 10:59:15 CEST 2018, Montant = 50.0, Compte = c1 ]
-Versement [ Tue Sep 25 10:59:15 CEST 2018, Montant = 100.0, Compte = c1 ]
+Versement [Tue Sep 25 10:59:15 CEST 2018, Montant = 90.0, Compte = c1]
+
+Versement [Tue Sep 25 10:59:15 CEST 2018, Montant = 60.0, Compte = c1]
+
+Retrait [Tue Sep 25 10:59:15 CEST 2018, Montant = 50.0, Compte = c1]
+
+Versement [Tue Sep 25 10:59:15 CEST 2018, Montant = 100.0, Compte = c1]
+
 -----------------------------------------
 Durand
-Versement [ Tue Sep 25 10:59:15 CEST 2018, Montant = 100.0, Compte = c2 ]
-Versement [ Tue Sep 25 10:59:15 CEST 2018, Montant = 600.0, Compte = c2 ]
-Retrait [ Tue Sep 25 10:59:15 CEST 2018, Montant = 300.0, Compte = c2 ]
-Retrait [ Tue Sep 25 10:59:15 CEST 2018, Montant = 100.0, Compte = c2 ]
+Versement [Tue Sep 25 10:59:15 CEST 2018, Montant = 100.0, Compte = c2]
 
+Versement [Tue Sep 25 10:59:15 CEST 2018, Montant = 600.0, Compte = c2]
+
+Retrait [Tue Sep 25 10:59:15 CEST 2018, Montant = 300.0, Compte = c2]
+
+Retrait [Tue Sep 25 10:59:15 CEST 2018, Montant = 100.0, Compte = c2]
 
 M.Dupont vous ne pouvez pas retirer 2000euros sur votre compte
 
-
-(*) 
+ 
 public interface IBanqueMetier {
 	public Compte consulterCompte(String codeCpte);
 	public void verser(String codeCpte,double montant);

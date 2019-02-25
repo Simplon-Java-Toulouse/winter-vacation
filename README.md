@@ -26,13 +26,21 @@ Pendant les vacances
 
 
 On souhaite créer une première version d’une appli qui permet de gérer des comptes bancaires, tel que :
+
 ° chaque compte est défini par un code, un solde et une date de création
+
 ° un compte courant est un compte avec la particularité d’avoir un découvert
+
 ° un compte épargne est un compte avec la particularité d’avoir un taux d’intérêt
+
 ° chaque compte appartient à un client 
+
 ° chaque client est défini par son code et son nom
+
 ° chaque compte peut subir plusieurs opérations
+
 ° il existe 2 types d’opérations : versement + retrait
+
 ° une opération est définie par un numéro, une date et un montant
 
 1/ Créer le diagramme de classes.
@@ -118,9 +126,15 @@ M.Dupont vous ne pouvez pas retirer 2000euros sur votre compte
 
  
 public interface IBanqueMetier {
+
 	public Compte consulterCompte(String codeCpte);
+
 	public void verser(String codeCpte,double montant);
+	
 	public void retirer(String codeCpte, double montant);
+	
 	public void virement(String codeCpte1,String codeCpte2, double montant);
+	
 	public ArrayList<Operation> listOperation(String codeCpte);
+	
 }
